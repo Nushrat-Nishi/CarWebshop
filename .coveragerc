@@ -1,0 +1,3 @@
+[run]
+source = carwebshoptest
+omit = carwebshoptest/test*
