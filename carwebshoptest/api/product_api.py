@@ -76,3 +76,19 @@ def update_product(request: Request):
         return Response(status=204)
     except Exception as ex:
         return Response(status=500, body='Something bad happened, call admin!')
+
+
+@view_config(route_name='product_api', request_method='DELETE')
+def update_product(request: Request):
+    id = request.matchdict['id']
+
+    is_exist = ProductRepository.is_product_exist(id)
+
+    if is_exist is None:
+        return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
+
+    try:
+        ProductRepository.delete_product(id)
+        return Response(status=204)
+    except Exception as ex:
+        return Response(status=500, body='Something bad happened, call admin!')

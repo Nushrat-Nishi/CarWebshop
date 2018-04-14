@@ -48,6 +48,7 @@ class ProductRepository:
 
         return exists
 
+
     @classmethod
     def update_product(cls, id, product: Product):
         session = DbSessionFactory.create_session()
@@ -63,4 +64,17 @@ class ProductRepository:
         saved_product.sku = product.sku
         saved_product.stock = product.stock
 
+        session.commit()
+
+
+    @classmethod
+    def delete_product(cls, id):
+        session = DbSessionFactory.create_session()
+
+        saved_product = session.query(Product).filter(Product.id == id).first()
+
+        if not saved_product:
+            return
+
+        session.delete(saved_product)
         session.commit()
