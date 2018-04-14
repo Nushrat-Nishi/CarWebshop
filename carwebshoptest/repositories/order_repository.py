@@ -26,3 +26,32 @@ class OrderRepository:
         session.commit()
 
         return order
+
+
+    @classmethod
+    def get_one(cls, id):
+        session = DbSessionFactory.create_session()
+        order = session.query(Order).filter(Order.id == id).first()
+        session.close()
+
+        return order
+
+
+    @classmethod
+    def is_exist(cls, id):
+        session = DbSessionFactory.create_session()
+        exists = session.query(Order.id).filter_by(id=id).scalar()
+        session.close()
+
+        return exists
+
+
+    @classmethod
+    def update(cls, id, status):
+        session = DbSessionFactory.create_session()
+
+        saved_order = session.query(Order).filter(Order.id == id).first()
+
+        saved_order.status = status
+
+        session.commit()
