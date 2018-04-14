@@ -21,10 +21,20 @@ class ProductRepository:
 
         return products
 
+
     @classmethod
     def create_product(cls, product: Product):
         session = DbSessionFactory.create_session()
         session.add(product)
         session.commit()
+
+        return product
+
+
+    @classmethod
+    def get_product(cls, id):
+        session = DbSessionFactory.create_session()
+        product = session.query(Product).filter(Product.id == id).first()
+        session.close()
 
         return product
