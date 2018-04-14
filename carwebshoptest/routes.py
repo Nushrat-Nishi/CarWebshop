@@ -4,3 +4,4 @@ def includeme(config):
     config.add_route('products_api', '/products')
     config.add_route('product_api', '/products/{id}')
     config.add_route('cart_api', '/cart/{product_id}')
+    config.add_route('order_api', '/orders')

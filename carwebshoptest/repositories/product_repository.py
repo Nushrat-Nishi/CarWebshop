@@ -4,7 +4,6 @@ from ..factory.db_session_factory import DbSessionFactory
 
 
 class ProductRepository:
-    __car_data = {}
 
     @classmethod
     def get_all(cls, limit=None):
