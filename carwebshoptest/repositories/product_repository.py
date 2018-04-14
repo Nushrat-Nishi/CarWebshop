@@ -7,7 +7,7 @@ class ProductRepository:
     __car_data = {}
 
     @classmethod
-    def get_products(cls, limit=None):
+    def get_all(cls, limit=None):
         session = DbSessionFactory.create_session()
 
         query = session.query(Product).order_by(Product.name)
@@ -23,7 +23,7 @@ class ProductRepository:
 
 
     @classmethod
-    def create_product(cls, product: Product):
+    def create(cls, product: Product):
         session = DbSessionFactory.create_session()
         session.add(product)
         session.commit()
@@ -32,7 +32,7 @@ class ProductRepository:
 
 
     @classmethod
-    def get_product(cls, id):
+    def get_one(cls, id):
         session = DbSessionFactory.create_session()
         product = session.query(Product).filter(Product.id == id).first()
         session.close()
@@ -41,7 +41,7 @@ class ProductRepository:
 
 
     @classmethod
-    def is_product_exist(cls, id):
+    def is_exist(cls, id):
         session = DbSessionFactory.create_session()
         exists = session.query(Product.id).filter_by(id=id).scalar()
         session.close()
@@ -50,7 +50,7 @@ class ProductRepository:
 
 
     @classmethod
-    def update_product(cls, id, product: Product):
+    def update(cls, id, product: Product):
         session = DbSessionFactory.create_session()
 
         saved_product = session.query(Product).filter(Product.id == id).first()
@@ -68,7 +68,7 @@ class ProductRepository:
 
 
     @classmethod
-    def delete_product(cls, id):
+    def delete(cls, id):
         session = DbSessionFactory.create_session()
 
         saved_product = session.query(Product).filter(Product.id == id).first()

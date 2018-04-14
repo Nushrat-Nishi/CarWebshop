@@ -11,7 +11,8 @@ log = logbook.Logger("API/Auto")
 
 @view_config(route_name='products_api', request_method='GET', renderer='json')
 def products(_):
-    products = ProductRepository.get_products(limit=10)
+    # TODO: implement pagination
+    products = ProductRepository.get_all(limit=50)
 
     product_json_list = []
     for product in products:
@@ -33,7 +34,7 @@ def create_product(request: Request):
         return Response(status=400, body=product_validator.error_msg)
 
     try:
-        product = ProductRepository.create_product(product_validator.product)
+        product = ProductRepository.create(product_validator.product)
         return Response(status=201, json_body=product.to_dict())
     except Exception as ex:
         return Response(status=500, body='Something bad happened, call admin!')
@@ -42,7 +43,7 @@ def create_product(request: Request):
 @view_config(route_name='product_api', request_method='GET', renderer='json')
 def get_product(request: Request):
     id = request.matchdict['id']
-    product = ProductRepository.get_product(id)
+    product = ProductRepository.get_one(id)
 
     if not product:
         return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
@@ -54,7 +55,7 @@ def get_product(request: Request):
 def update_product(request: Request):
     id = request.matchdict['id']
 
-    is_exist = ProductRepository.is_product_exist(id)
+    is_exist = ProductRepository.is_exist(id)
 
     if is_exist is None:
         return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
@@ -71,7 +72,7 @@ def update_product(request: Request):
 
     try:
         product = product_validator.product
-        ProductRepository.update_product(id, product)
+        ProductRepository.update(id, product)
 
         return Response(status=204)
     except Exception as ex:
@@ -79,16 +80,16 @@ def update_product(request: Request):
 
 
 @view_config(route_name='product_api', request_method='DELETE')
-def update_product(request: Request):
+def delete_product(request: Request):
     id = request.matchdict['id']
 
-    is_exist = ProductRepository.is_product_exist(id)
+    is_exist = ProductRepository.is_exist(id)
 
     if is_exist is None:
         return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
 
     try:
-        ProductRepository.delete_product(id)
+        ProductRepository.delete(id)
         return Response(status=204)
     except Exception as ex:
         return Response(status=500, body='Something bad happened, call admin!')
