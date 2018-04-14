@@ -31,7 +31,7 @@ def create_product(request: Request):
     product_validator = ProductValidator(product_json)
     product_validator.validate()
     if product_validator.errors:
-        return Response(status=400, body=product_validator.error_msg)
+        return Response(status=400, body=product_validator.error_msg())
 
     try:
         product = ProductRepository.create(product_validator.product)

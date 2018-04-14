@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d38bbde1-7760-4c5b-9f2c-e0f951b8ecb9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/carwebshoptest/api/cart_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carwebshoptest/api/product_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/carwebshoptest/api/product_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carwebshoptest/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/carwebshoptest/routes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CarWebshopTest$CarWebshopTest.coverage" NAME="CarWebshopTest Coverage Results" MODIFIED="1523704104148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CarWebshopTest$CarWebshopTest.coverage" NAME="CarWebshopTest Coverage Results" MODIFIED="1523715314264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -58,8 +60,8 @@
       <file leaf-file-name="product_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carwebshoptest/api/product_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="-81">
+              <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -70,8 +72,20 @@
       <file leaf-file-name="routes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carwebshoptest/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state>
+              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart_api.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/carwebshoptest/api/cart_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +93,8 @@
       <file leaf-file-name="product_validator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="313">
+              <caret line="46" column="32" selection-start-line="45" selection-start-column="14" selection-end-line="46" selection-end-column="36" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -88,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product_repository.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product_repository.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
+            <state relative-caret-position="91">
               <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
               <folding>
                 <element signature="e#1#29#0" expanded="true" />
@@ -135,6 +149,7 @@
       <find>deci</find>
       <find>conte</find>
       <find>None</find>
+      <find>error_msg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,13 +166,14 @@
         <option value="$PROJECT_DIR$/carwebshoptest/repositories/ProductRepository.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/__init__.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/api/validators/products_validator.py" />
-        <option value="$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/factory/db_session_factory.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/models/product.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/carwebshoptest/routes.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py" />
+        <option value="$PROJECT_DIR$/carwebshoptest/routes.py" />
+        <option value="$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py" />
         <option value="$PROJECT_DIR$/carwebshoptest/api/product_api.py" />
+        <option value="$PROJECT_DIR$/carwebshoptest/api/cart_api.py" />
       </list>
     </option>
   </component>
@@ -253,6 +269,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/carwebshoptest/api" />
       <recent name="$PROJECT_DIR$/carwebshoptest/models" />
     </key>
   </component>
@@ -359,28 +376,34 @@
       <option name="project" value="LOCAL" />
       <updated>1523703495667</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring.">
+      <created>1523704175620</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523704175620</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1368" height="749" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39749607" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23630673" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20204978" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20204978" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.329429" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39906102" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43035993" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -403,18 +426,12 @@
     <MESSAGE value="Product by id." />
     <MESSAGE value="Product update" />
     <MESSAGE value="Delete product." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete product." />
+    <MESSAGE value="Refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py</url>
-          <line>55</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -617,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pyramid/viewderivers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="389" selection-start-line="389" selection-end-line="389" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -634,19 +644,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carwebshoptest/routes.py">
+    <entry file="file://$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="91">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#1#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -661,22 +664,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/carwebshoptest/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/carwebshoptest/api/product_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="-81">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carwebshoptest/repositories/product_repository.py">
+    <entry file="file://$PROJECT_DIR$/carwebshoptest/api/validators/product_validator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="46" column="32" selection-start-line="45" selection-start-column="14" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pyramid/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2251">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pyramid/viewderivers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carwebshoptest/api/cart_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding>
-            <element signature="e#1#29#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

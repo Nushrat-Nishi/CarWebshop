@@ -41,3 +41,9 @@ class ProductValidator():
             product = Product(id=id, name=name, description=description, brand=brand, category=category,
                               purchase_price=purchase_price, sales_price=sales_price, sku=sku, stock=stock)
             self.product = product
+
+    def error_msg(self):
+        msg = 'There are errors with your request: \n' + \
+              '\n'.join(self.errors)
+
+        return msg
