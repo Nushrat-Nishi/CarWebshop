@@ -2,7 +2,7 @@ from pyramid.request import Request
 from pyramid.response import Response
 from pyramid.view import view_config
 import logbook
-import jsonpickle
+
 
 from carwebshoptest.api.validators.product_validator import ProductValidator
 from ..repositories.product_repository import ProductRepository

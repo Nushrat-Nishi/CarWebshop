@@ -19,7 +19,6 @@ requires = [
     'waitress',
     'mysqlclient',
     'logbook',
-    'jsonpickle',
     ]
 
 tests_require = [
