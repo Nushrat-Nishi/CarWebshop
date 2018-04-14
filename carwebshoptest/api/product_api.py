@@ -34,10 +34,8 @@ def create_product(request: Request):
 
     try:
         product = ProductRepository.create_product(product_validator.product)
-        log.trace(product)
         return Response(status=201, json_body=product.to_dict())
     except Exception as ex:
-        log.trace("Exception: {}".format(ex))
         return Response(status=500, body='Something bad happened, call admin!')
 
 
@@ -50,3 +48,31 @@ def get_product(request: Request):
         return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
 
     return product.to_dict()
+
+
+@view_config(route_name='product_api', request_method='PUT')
+def update_product(request: Request):
+    id = request.matchdict['id']
+
+    is_exist = ProductRepository.is_product_exist(id)
+
+    if is_exist is None:
+        return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(id)})
+
+    try:
+        product_json = request.json_body
+    except Exception as ex:
+        return Response(status=400, body='Bad input.')
+
+    product_validator = ProductValidator(product_json)
+    product_validator.validate()
+    if product_validator.errors:
+        return Response(status=400, body=product_validator.error_msg)
+
+    try:
+        product = product_validator.product
+        ProductRepository.update_product(id, product)
+
+        return Response(status=204)
+    except Exception as ex:
+        return Response(status=500, body='Something bad happened, call admin!')

@@ -38,3 +38,29 @@ class ProductRepository:
         session.close()
 
         return product
+
+
+    @classmethod
+    def is_product_exist(cls, id):
+        session = DbSessionFactory.create_session()
+        exists = session.query(Product.id).filter_by(id=id).scalar()
+        session.close()
+
+        return exists
+
+    @classmethod
+    def update_product(cls, id, product: Product):
+        session = DbSessionFactory.create_session()
+
+        saved_product = session.query(Product).filter(Product.id == id).first()
+
+        saved_product.name = product.name
+        saved_product.description = product.description
+        saved_product.brand = product.brand
+        saved_product.category = product.category
+        saved_product.purchase_price = product.purchase_price
+        saved_product.sales_price = product.sales_price
+        saved_product.sku = product.sku
+        saved_product.stock = product.stock
+
+        session.commit()
