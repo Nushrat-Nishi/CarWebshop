@@ -1,4 +1,8 @@
 from pyramid.config import Configurator
+from .factory.db_session_factory import DbSessionFactory
+
+def init_db(config):
+    DbSessionFactory.global_init()
 
 
 def main(global_config, **settings):
@@ -9,4 +13,7 @@ def main(global_config, **settings):
     config.include('.models')
     config.include('.routes')
     config.scan()
+
+    init_db(config)
+
     return config.make_wsgi_app()
