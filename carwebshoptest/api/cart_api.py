@@ -54,3 +54,46 @@ def product_already_in_cart(cart, product_id):
     for cart_item in cart:
         if cart_item['product_id'] == product_id:
             return cart_item
+
+
+
+@view_config(route_name='cart_api', request_method='DELETE', renderer='json')
+def delete_from_cart(request: Request):
+    product_id = int(request.matchdict['product_id'])
+
+    is_exist = ProductRepository.is_exist(product_id)
+
+    if is_exist is None:
+        return Response(status=404, json_body={'error': "The product with id '{}' is not found.".format(product_id)})
+
+
+    cart_cookie = request.cookies.get('Cart')
+
+
+    cart = eval(cart_cookie)
+    cart_item = product_already_in_cart(cart, product_id)
+    cart.remove(cart_item)
+
+    response = Response(status=200)
+    response.set_cookie('Cart', str(cart), max_age=31536000)  # max_age = year
+    return response
+
+
+def product_already_in_cart(cart, product_id):
+    for cart_item in cart:
+        if cart_item['product_id'] == product_id:
+            return cart_item
+
+
+
+
+@view_config(route_name='mycart_api', request_method='GET', renderer='json')
+def showall_from_cart(request: Request):
+
+    cart_cookie = request.cookies.get('Cart')
+
+    cart = eval(cart_cookie)
+
+    response = Response(status=200)
+    response.set_cookie('Cart', str(cart), max_age=31536000)  # max_age = year
+    return cart
