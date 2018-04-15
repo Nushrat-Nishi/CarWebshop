@@ -44,7 +44,7 @@ venv/bin/pserve development.ini
 ## API Documentation
 Download postman collection from [here](https://github.com/Nushrat-Nishi/CarWebshop/blob/master/CarWebshop.postman_collection.json)
 
-##### POST Create Product - http://localhost:6543/products
+##### POST - Create Product - http://localhost:6543/products
 ```
 Body:
 {
@@ -69,8 +69,9 @@ Output:
 }
 ```
 
-##### GET All Product - http://localhost:6543/products
+##### GET - Get All the Products - http://localhost:6543/products
 ```
+Output:
 [
     {
         "id": 1,
@@ -84,8 +85,9 @@ Output:
 ]
 ```
 
-##### GET Product By Id - http://localhost:6543/products/1
+##### GET - Get Product By Id - http://localhost:6543/products/1
 ```
+Output:
 {
     "id": 1,
     "name": "BMW Wheel",
@@ -97,8 +99,9 @@ Output:
 }
 ```
 
-##### PUT Update Product - http://localhost:6543/products/1
+##### PUT - Update Product - http://localhost:6543/products/1
 ```
+Body:
 {
 "name": "BMW Wheel Updated",
 "description": "BMW Wheel",
@@ -108,25 +111,18 @@ Output:
 "sku": "mn1"
 }
 ```
-##### DELETE Delete Product - http://localhost:6543/products/1
+##### DELETE - Delete Product - http://localhost:6543/products/1
+
+##### POST - Add To Cart - http://localhost:6543/cart/1
 ```
-{
-"name": "BMW Wheel Updated",
-"description": "BMW Wheel",
-"brand": "BMW",
-"category": "Wheel",
-"sales_price":1.2,
-"sku": "mn1"
-}
-```
-##### POST Add To Cart - http://localhost:6543/cart/1
-```
+Body:
 {
 "quantity": 6
 }
 ```
-##### GET Show added products in the Cart - http://localhost:6543/cart
+##### GET - Show added products in the Cart - http://localhost:6543/cart
 ```
+Output:
 [
     {
         "product_id": 1,
@@ -135,9 +131,9 @@ Output:
 ]
 ```
 
-##### DELETE Product from the Cart - http://localhost:6543/cart/1
+##### DELETE - Product from the Cart - http://localhost:6543/cart/1
 
-##### POST Create an order - http://localhost:6543/orders
+##### POST - Create an order - http://localhost:6543/orders
 ```
 Body:
 {
@@ -158,8 +154,9 @@ Output:
 }
 ```
 
-##### GET All the orders made - http://localhost:6543/orders
+##### GET - Get all the orders made - http://localhost:6543/orders
 ```
+Output:
 [
     {
         "id": 1,
@@ -176,8 +173,9 @@ Output:
     }
 ]
 ```
-##### GET Order by Order Id - http://localhost:6543/orders/1
+##### GET - Order by Order Id - http://localhost:6543/orders/1
 ```
+Output:
 {
     "id": 1,
     "shipping_address": "Amsterdam",
@@ -194,6 +192,7 @@ Output:
 ```
 ##### PUT Update Order Status - http://localhost:6543/orders/1/status
 ```
+Body:
 {
 "status":"close new"
 }
