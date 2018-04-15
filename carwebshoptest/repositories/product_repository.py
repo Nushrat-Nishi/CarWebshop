@@ -58,10 +58,8 @@ class ProductRepository:
         saved_product.description = product.description
         saved_product.brand = product.brand
         saved_product.category = product.category
-        saved_product.purchase_price = product.purchase_price
         saved_product.sales_price = product.sales_price
         saved_product.sku = product.sku
-        saved_product.stock = product.stock
 
         session.commit()
 
