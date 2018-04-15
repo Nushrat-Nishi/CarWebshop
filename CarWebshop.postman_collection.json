@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "0171fc5c-fee1-4013-9215-ae9a868f7478",
+		"name": "CarWebshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"stockEntryDate\": \"1987-07-21\",\n\"stockExpireDate\": \"1987-07-21\",\n\"quantiy\": 40,\n\"purchasePrice\": 3,\n\"salePrice\": 2,\n\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"products"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "POST create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"BMW Wheel\",\n\"description\": \"delete\",\n\"brand\": \"BMW\",\n\"category\": \"Wheel\",\n\"sales_price\":1.2,\n\"sku\": \"mn1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"products"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "GET product by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"stockEntryDate\": \"1987-07-21\",\n\"stockExpireDate\": \"1987-07-21\",\n\"quantiy\": 40,\n\"purchasePrice\": 3,\n\"salePrice\": 2,\n\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"products",
+						"2"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\": \"BMW Wheel Updated\",\n\"description\": \"BMW Wheel\",\n\"brand\": \"BMW\",\n\"category\": \"Wheel\",\n\"sales_price\":1.2,\n\"sku\": \"mn1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"products",
+						"1"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6543/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"products",
+						"2"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "POST add to cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"quantity\": 6\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/cart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"cart",
+						"1"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "GET show all from cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"quantity\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"cart"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE delete from cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6543/cart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"cart",
+						"1"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "GET orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"stockEntryDate\": \"1987-07-21\",\n\"stockExpireDate\": \"1987-07-21\",\n\"quantiy\": 40,\n\"purchasePrice\": 3,\n\"salePrice\": 2,\n\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"orders"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "GET orders by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"stockEntryDate\": \"1987-07-21\",\n\"stockExpireDate\": \"1987-07-21\",\n\"quantiy\": 40,\n\"purchasePrice\": 3,\n\"salePrice\": 2,\n\"productId\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/orders/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"orders",
+						"7"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "POST create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"shipping_address\": \"Senecastraat 61, 1064ZJ\",\n\"delivery_date\": \"1987-07-21\",\n\"delivery_time\": \"18:00\",\n\"status\":\"open\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"orders"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"status\":\"open new\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6543/orders/7/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6543",
+					"path": [
+						"orders",
+						"7",
+						"status"
+					]
+				},
+				"description": "aaa"
+			},
+			"response": []
+		}
+	]
+}
