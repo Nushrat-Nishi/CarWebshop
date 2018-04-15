@@ -20,7 +20,7 @@ For the sake of simplicity and time constraint:
   - Payment system hasn't been added.
 
 ## Tech
-Webshop uses a number of open source projects to work properly:
+Webshop uses:
 * Python Pyramid Framework
 * MySQL
 
@@ -35,6 +35,14 @@ Webshop uses a number of open source projects to work properly:
 ```
 git clone https://github.com/Nushrat-Nishi/CarWebshop
 cd CarWebshop
+```
+```
+Change the value of *conn_string* in *CarWebshop/carwebshop/factory/db_session_factory.py* file according to your database.
+```
+```
+Change the value of *sqlalchemy.url* in *CarWebshop/development.ini* file according to your database.
+```
+```
 venv/bin/pserve development.ini
 ```
 
