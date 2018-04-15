@@ -39,7 +39,7 @@ venv/bin/pserve development.ini
 ```
 
 ## API Documentation
-Download postman collection from [here]()
+Download postman collection from [here](https://github.com/Nushrat-Nishi/CarWebshop/blob/master/CarWebshop.postman_collection.json)
 
 ##### POST Create Product - http://localhost:6543/products
 ```
