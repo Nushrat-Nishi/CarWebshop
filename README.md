@@ -36,16 +36,11 @@ Webshop uses:
 git clone https://github.com/Nushrat-Nishi/CarWebshop
 cd CarWebshop
 ```
-```
-Change the value of *conn_string* in *CarWebshop/carwebshop/factory/db_session_factory.py* file according to your database.
-```
-```
-Change the value of *sqlalchemy.url* in *CarWebshop/development.ini* file according to your database.
-```
+  - Change the value of *conn_string* in *CarWebshop/carwebshop/factory/db_session_factory.py* file according to your database.
+  - Change the value of *sqlalchemy.url* in *CarWebshop/development.ini* file according to your database.
 ```
 venv/bin/pserve development.ini
 ```
-
 ## API Documentation
 Download postman collection from [here](https://github.com/Nushrat-Nishi/CarWebshop/blob/master/CarWebshop.postman_collection.json)
 
